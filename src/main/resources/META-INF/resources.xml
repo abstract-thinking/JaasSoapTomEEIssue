@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- In interceptors -->
+    <Service id="wss4j" class-name="org.apache.openejb.server.cxf.config.WSS4JInInterceptorFactory" factory-name="create">
+        action = UsernameToken
+        passwordCallbackClass = com.example.PasswordHandler
+    </Service>
+
+    <Service id="customizedInterceptor" class-name="com.example.CustomizedInterceptor"/>
+</resources>

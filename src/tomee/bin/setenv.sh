@@ -1,0 +1,1 @@
+export CATALINA_OPTS="$CATALINA_OPTS -Djava.security.auth.login.config=/opt/tomee/apache-tomee-plus-9.1.0/conf/login.config"
