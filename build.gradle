@@ -1,5 +1,4 @@
 plugins {
-    id 'java'
     id "com.yupzip.wsdl2java" version "3.0.0"
     id 'war'
 }
@@ -9,14 +8,13 @@ version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    maven { // Could not find org.opensaml:opensaml-messaging-api:4.2.0
-        // :lc-core > org.apache.tomee:tomee-embedded:9.1.0 > org.apache.tomee:tomee-webservices:9.1.0 > org.apache.tomee:openejb-cxf:9.1.0 > org.apache.wss4j:wss4j-ws-security-dom:3.0.0 > org.apache.wss4j:wss4j-ws-security-common:3.0.0 > org.opensaml:opensaml-saml-impl:4.2.0
+    maven {
         url "https://build.shibboleth.net/maven/releases/"
     }
 }
 
 dependencies {
-    compileOnly 'org.apache.tomee.bom:tomee-plus:9.1.0'
+    providedCompile 'org.apache.tomee.bom:tomee-plus:9.1.0'
 
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'

@@ -11,6 +11,4 @@ public class LogMeInProvider implements LoginProvider {
     public List<String> authenticate(String user, String password) throws FailedLoginException {
             return List.of();
     }
-
-
 }
